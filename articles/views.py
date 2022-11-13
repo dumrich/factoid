@@ -1,4 +1,7 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 
-# T
-def index(request)
+#TODO: CBV
+def index(request):
+    return HttpResponse("Factoid index page")
+    
