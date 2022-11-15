@@ -1,4 +1,6 @@
 from django.db import models
+from django.urls import reverse
+from django.template.defaultfilters import slugify
 
 class Article(models.Model):
     """Represent an Article"""
@@ -11,7 +13,12 @@ class Article(models.Model):
     
     date_added = models.DateTimeField('Date Published')
     date_updated = models.DateTimeField('Date Updated')
-    slug = models.SlugField(max_length=100, unique=True)
+
+    article_slug = models.SlugField(max_length=100, unique=True, blank=True, null=True)
+
+    def save(self, *args, **kwargs):
+        self.article_slug = self.slug()
+        super().save(*args, **kwargs)
 
     def slug(self):
         return slugify(self.title)
@@ -59,3 +66,6 @@ class Source(models.Model):
     url = models.URLField(max_length=500)
 
     org = models.CharField(max_length = 10, choices = NETWORKS, default = "other")
+
+    def __str__(self):
+        return self.article.title + f" ({self.org})"
