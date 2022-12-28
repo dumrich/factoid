@@ -1,0 +1,38 @@
+{% extends 'articles/base.html' %}
+
+{% load crispy_forms_tags %}
+{% block content %}
+<form method="post">
+<div class="login-form-area mb-50 pt-10">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-xl-6 col-lg-7 col-md-10">
+<div class="login-form">
+
+<div class="login-heading">
+<span>Login</span>
+<p>Enter Login details to get access</p>
+</div>
+
+<div class="input-box">
+
+    {% csrf_token %}
+    {{form|crispy}}
+    <div class="single-input-fields login-check">
+        <input type="checkbox" id="fruit1" name="keep-log">
+        <label for="fruit1">Keep me logged in</label>
+        <a href="#" class="f-right">Forgot Password?</a>
+    </div>
+</div>
+
+<div class="login-footer">
+<p>Don’t have an account? <a href="/user/sign-up">Sign Up</a> here</p>
+<button type="submit" class="btn">Login</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</form>
+{% endblock %}

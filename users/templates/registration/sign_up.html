@@ -1,0 +1,33 @@
+{% extends 'articles/base.html' %}
+
+{% load crispy_forms_tags %}
+{% block content %}
+
+<form method="post">
+<div class="register-form-area mt-10 mb-40">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-xl-6 col-lg-7 col-md-10">
+<div class="register-form text-center">
+
+<div class="register-heading">
+<span>Sign Up</span>
+<p>Create your account to get full access</p>
+</div>
+
+<div class="input-box">
+
+{% csrf_token %}{{form|crispy}}
+</div>
+
+<div class="register-footer">
+<p> Already have an account? <a href="/login"> Login</a> here</p>
+<button type="submit" class="btn">Sign Up</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</form>
+{% endblock %}

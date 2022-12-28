@@ -1,9 +1,5 @@
-{% if latest_article_list %}
-    <ul>
-    {% for article in latest_article_list %}
-        <li><a href="{% url 'article_detail' article.slug %}">{{ article.title }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No Articles are available.</p>
-{% endif %}
+{% extends './base.html' %}
+
+{% block content %}
+<p>Hello</p>
+{% endblock %}

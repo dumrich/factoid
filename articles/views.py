@@ -3,7 +3,7 @@ from .models import Article, Source
 
 #TODO: CBV
 
-def index(request):
+def article_list(request):
     """List all articles"""
     latest_article_list = Article.objects.order_by('-date_added')
     return render(request, 'articles/index.html', {'latest_article_list': latest_article_list})
