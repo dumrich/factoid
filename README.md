@@ -25,10 +25,29 @@ Factoid is a multi-perspective news site, which uses GPT-3 to idenify, filter, a
 - [ ] Mobile API
 - [ ] Frontpage ranking algo
 
-# Presentation
-- [ ] Algorithm Diagram
-- [ ] Sourcing diagram (Performance)
-- [ ] Tech Stack Visuals
-- [ ] Comment diagrams
-- [ ] Newsletter
-- [ ] Media Bias misinformation
+# Technical Features
+- News Website with 5 sources builds new article, with lists and detail views
+- Bibliography
+- Thumbnail previews
+- Comment Section
+- Search Feature
+- Subscribe to topics
+- Profile
+- Reading List
+- Analytics
+- Share on social media
+- Newsletter
+- Accessibility
+- Unit Tests, docker, etc
+- REST API
+- Social Media Buttons
+
+# Presentation Features
+- Main Presentation (Similar to last year)
+    - Media Bias Why
+    - Web Stack + Deployment
+- Architecture Diagram
+- Sourcing (Performance) Infographics
+- Algorithm Diagrams
+- Media Bias misinformation Polls
+- Before/After Factoid Polls
