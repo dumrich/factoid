@@ -1,5 +1,68 @@
 {% extends './base.html' %}
 
 {% block content %}
-<p>Hello</p>
+<div class="col-xxl-7 col-xl-6 col-lg-6">
+
+<div class="single-slider">
+<div class="trending-top mb-30">
+<div class="trend-top-img">
+<a href="{% url 'article_detail' latest_article.slug %}"> <img src="{{ latest_article.thumbnail.url }}" width="889.3" height="414.783" alt=""></a>
+</div>
+<div class="trend-top-cap">
+<span>{{latest_article.get_category_display}}</span>
+<h2><a style="text-decoration: none;" href="{% url 'article_detail' latest_article.slug %}">{{latest_article.title}}</a></h2>
+<p>by <a style="text-decoration: none;" href="#">Multiple Authors</a></p>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="col-xxl-5 col-xl-6 col-lg-6">
+<div class="row">
+{% for art in main_articles %}
+<div class="col-xl-12 col-lg-12 col-md-11">
+<div class="whats-right-single mb-20">
+<div class="whats-right-img">
+<a href="{%url 'article_detail' art.slug%}"><img src="{{ art.thumbnail.url }}" width="312" height="210" alt=""></a>
+</div>
+<div class="whats-right-cap">
+<span>{{art.get_category_display}}</span>
+<h4><a style="text-decoration: none;" href="{%url 'article_detail' art.slug%}">{{art.title}}</a></h4>
+<p>by<a style="text-decoration: none;" href="#"> Multiple Authors</a></p>
+</div>
+</div>
+</div>
+{% endfor %}
+
+</div>
+</div>
+{% endblock %}
+
+{% block prefoot %}
+<div class="subscribe-area section-bg">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-xxl-7 col-xl-8 col-lg-9">
+
+<div class="subcrition-tittle text-center mb-40">
+<h2>Subscribe to the newsletter</h2>
+<p>Get a weekly digest of our most important stories direct to your inbox.</p>
+</div>
+
+<form action="#" class="search-box">
+<div class="input-form">
+<input type="text" placeholder="Enter your mail">
+</div>
+<div class="search-form">
+<a href="#">Send Now</a>
+</div>
+</form>
+<div class="pera text-center pt-10">
+<p>Emails sent in accordance to <a href="#">privacy policy</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
 {% endblock %}

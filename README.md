@@ -9,22 +9,6 @@ Factoid is a multi-perspective news site, which uses GPT-3 to idenify, filter, a
 - FreeBSD 13.0 for operating system
 - Github Actions for testing
 
-# TODO List
-- [X] Setup models
-- [ ] Setup views
-- [X] Setup basic templates
-- [X] Custom user model
-- [x] Frontend enhance P1
-- [ ] Authentication pages
-- [ ] article creation
-- [X] Setup Admin page
-- [ ] Add unit tests and actions
-- [X] Setup static pages
-- [ ] Setup form
-- [ ] Comment section to counter groupthink
-- [ ] Mobile API
-- [ ] Frontpage ranking algo
-
 # Technical Features
 - News Website with 5 sources builds new article, with lists and detail views
 - iOS app and Web App
@@ -51,4 +35,9 @@ Factoid is a multi-perspective news site, which uses GPT-3 to idenify, filter, a
 - Sourcing (Performance) Infographics
 - Algorithm Diagrams
 - Media Bias misinformation Polls
-- Before/After Factoid Polls
+- Before/After Factoid Case Study
+
+# Schedule
+- 1/7 PostGRES Setup & Docker & Real Image works
+- 1/8 Docker and basic Production
+- 1/9 
