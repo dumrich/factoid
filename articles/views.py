@@ -1,5 +1,22 @@
 from django.shortcuts import render
 from .models import Article
+from django.db.models import Q
+from django.core.paginator import Paginator
+
+
+def show_category(request, category):
+    """Show articles of only certain category"""
+    page_number = request.GET.get("page")
+
+    articles = Article.objects.filter(
+        Q(category=category)).order_by('-id')
+
+    paginator = Paginator(articles, 12)
+    page_articles = paginator.get_page(page_number)
+
+    return render(request, 'articles/category.html',
+                  {'articles': page_articles,
+                   'category': category})
 
 
 def article_list(request):
