@@ -16,6 +16,7 @@ def profile(request):
     if request.method == 'POST':
         form = CheckboxForm(request.POST)
         if form.is_valid():
+            user_profile.categories.clear()
             for option in form.cleaned_data['options']:
                 category = Category.objects.create(name=option)
                 user_profile.categories.add(category)

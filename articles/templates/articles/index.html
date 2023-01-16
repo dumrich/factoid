@@ -91,6 +91,7 @@
     <button class="btn source-link-mini">{{art.get_sourceThreeOrg_display}}
     </button>
 &nbsp;
+
     <button class="btn source-link-mini">{{art.get_sourceFourOrg_display}}
     </button>
 &nbsp;
@@ -105,68 +106,78 @@
 </div>
 </div>
 
+{% for category, article in profile_arts %}
+<section class="technology-area mb-30">
 <div class="container-fluid">
-<div class="row">
-<div class="col-xl-10">
 <div class="row">
 <div class="col-lg-12">
 <div class="section-tittle mb-30 d-flex align-items-center justify-content-between">
-<h2>Arts &amp; Culture</h2>
-<a href="#">See All</a>
+<h2>{{category.name | capfirst}}</h2>
+<a href="{% url 'category_url' category.name %}">See All</a>
 </div>
 </div>
 </div>
 <div class="row">
-<div class="col-lg-4 col-md-6 col-sm-6">
+<div class="col-lg-3 col-md-6 col-sm-6">
 <div class="technology-post mb-30">
 <div class="technology-wrapper">
 <div class="properties-img">
-<a href="post_details.html"><img src="assets/img/gallery/culture1.jpg" alt=""></a>
+<a href="post_details.html"><img src="assets/img/gallery/culture4.jpg" alt=""></a>
 </div>
 <div class="properties-caption">
 <span>Health</span>
+<h3><a href="post_details.html">26 last-minute holiday gifts that are still thoughtful and unique</a></h3>
+<p>by <a href="#">Pete Sariya</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-6 col-sm-6">
+<div class="technology-post mb-30">
+<div class="technology-wrapper">
+<div class="properties-img">
+<a href="post_details.html"><img src="assets/img/gallery/culture5.jpg" alt=""></a>
+</div>
+<div class="properties-caption">
+<span>Culture</span>
+<h3><a href="post_details.html">The Amex Business Platinum vs. the Amex Business Gold</a></h3>
+<p>by <a href="#">Pete Sariya</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-6 col-sm-6">
+<div class="technology-post mb-30">
+<div class="technology-wrapper">
+<div class="properties-img">
+<a href="post_details.html"><img src="assets/img/gallery/culture6.jpg" alt=""></a>
+</div>
+<div class="properties-caption">
+<span>video</span>
+<h3><a href="post_details.html">Lights that warn planes of obstacles were exposed to Open Internet</a></h3>
+<p>by <a href="#">Pete Sariya</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-6 col-sm-6">
+<div class="technology-post mb-30">
+<div class="technology-wrapper">
+<div class="properties-img">
+<a href="post_details.html"><img src="assets/img/gallery/culture7.jpg" alt=""></a>
+</div>
+<div class="properties-caption">
+<span>video</span>
 <h3><a href="post_details.html">Substituting ‘follow your passion’ with ‘find your purpose’</a></h3>
 <p>by <a href="#">Pete Sariya</a></p>
 </div>
 </div>
 </div>
 </div>
-<div class="col-lg-4 col-md-6 col-sm-6">
-<div class="technology-post mb-30">
-<div class="technology-wrapper">
-<div class="properties-img">
-<a href="post_details.html"><img src="assets/img/gallery/culture2.jpg" alt=""></a>
-</div>
-<div class="properties-caption">
-<span>Culture</span>
-<h3><a href="post_details.html">Ibuprofen should not be used for managing symptoms</a></h3>
-<p>by <a href="#">Pete Sariya</a></p>
 </div>
 </div>
-</div>
-</div>
-<div class="col-lg-4 col-md-6 col-sm-6">
-<div class="technology-post mb-30">
-<div class="technology-wrapper">
-<div class="properties-img">
-<a href="post_details.html"><img src="assets/img/gallery/culture3.jpg" alt=""></a>
-
-<div class="video-icon">
-<a class="popup-video btn-icon" href="https://www.youtube.com/watch?v=up68UAfH0d0" data-animation="bounceIn" data-delay=".4s"><i class="fas fa-play"></i></a>
-</div>
-</div>
-<div class="properties-caption">
-<span>video</span>
-<h3><a href="post_details.html">Fearing corona recession, France announces</a></h3>
-<p>by <a href="#">Pete Sariya</a></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+</section>
+{% endfor %}
 
 {% endblock %}
 
