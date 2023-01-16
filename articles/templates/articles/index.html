@@ -6,16 +6,57 @@
 <div class="single-slider">
 <div class="trending-top mb-30">
 <div class="trend-top-img">
-<a href="{% url 'article_detail' latest_article.slug %}"> <img src="{{ latest_article.thumbnail.url }}" width="889.3" height="414.783" alt=""></a>
+  <a href="{% url 'article_detail' latest_article.slug %}">
+    <img src="{{ latest_article.thumbnail.url }}" width="889.3" height="414.783" alt="">
+  </a>
+
+
 </div>
 <div class="trend-top-cap">
-<span>{{latest_article.get_category_display}}</span>
-<h2><a style="text-decoration: none;" href="{% url 'article_detail' latest_article.slug %}">{{latest_article.title}}</a></h2>
-<p>by <a style="text-decoration: none;" href="#">Multiple Authors</a></p>
+  <span>{{latest_article.get_category_display}}
+  </span>
+  <h2>
+    <a style="text-decoration: none;" href="{% url 'article_detail' latest_article.slug %}">{{latest_article.title}}
+    </a>
+  </h2>
+  <p>by
+    <a style="text-decoration: none;" href="#">Multiple Authors
+    </a>
+  </p>
+<div class="btn-group">
+    <button class="btn source-link-mini"><a style="text-decoration: none; color: inherit;" href="{{ latest_article.sourceOne }}">{{latest_article.get_sourceOneOrg_display}}</a>
+    </button>
+&nbsp;
+    <button class="btn source-link-mini"><a style="text-decoration: none; color: inherit;" href="{{ latest_article.sourceTwo }}">{{latest_article.get_sourceTwoOrg_display}}</a>
+    </button>
+&nbsp;
+    <button class="btn source-link-mini"><a style="text-decoration: none; color: inherit;" href="{{ latest_article.sourceThree }}">{{latest_article.get_sourceThreeOrg_display}}</a>
+    </button>
+&nbsp;
+    <button class="btn source-link-mini"><a style="text-decoration: none; color: inherit;" href="{{ latest_article.sourceFour }}">{{latest_article.get_sourceFourOrg_display}}</a>
+    </button>
+&nbsp;
+    <button class="btn source-link-mini"><a style="text-decoration: none; color: inherit;" href="{{ latest_article.sourceFive }}">{{latest_article.get_sourceFiveOrg_display}}</a>
+    </button>
 </div>
 </div>
 </div>
 </div>
+</div>
+
+<style>
+  .source-link-mini {
+      font-family: "Chivo", sans-serif;
+      text-decoration: none;
+      background: #C70D0D;
+      font-size: 20px;
+      text-align: center;
+      color: #fff;
+      display: inline-block;
+      padding: 7px 7px;
+      line-height: 14px;
+  }
+</style>
 
 
 <div class="col-xxl-5 col-xl-6 col-lg-6">
@@ -24,19 +65,109 @@
 <div class="col-xl-12 col-lg-12 col-md-11">
 <div class="whats-right-single mb-20">
 <div class="whats-right-img">
-<a href="{%url 'article_detail' art.slug%}"><img src="{{ art.thumbnail.url }}" width="312" height="210" alt=""></a>
+  <a href="{%url 'article_detail' art.slug%}">
+    <img src="{{ art.thumbnail.url }}" width="312" height="210" alt="">
+  </a>
 </div>
 <div class="whats-right-cap">
-<span>{{art.get_category_display}}</span>
-<h4><a style="text-decoration: none;" href="{%url 'article_detail' art.slug%}">{{art.title}}</a></h4>
-<p>by<a style="text-decoration: none;" href="#"> Multiple Authors</a></p>
+  <span>{{art.get_category_display}}
+  </span>
+  <h4>
+    <a style="text-decoration: none;" href="{%url 'article_detail' art.slug%}">{{art.title}}
+    </a>
+  </h4>
+  <p>by
+    <a style="text-decoration: none;" href="#"> Multiple Authors
+    </a>
+  </p>
+
+<div class="btn-group">
+    <button class="btn source-link-mini">{{art.get_sourceOneOrg_display}}
+    </button>
+&nbsp;
+    <button class="btn source-link-mini">{{art.get_sourceTwoOrg_display}}
+    </button>
+&nbsp;
+    <button class="btn source-link-mini">{{art.get_sourceThreeOrg_display}}
+    </button>
+&nbsp;
+    <button class="btn source-link-mini">{{art.get_sourceFourOrg_display}}
+    </button>
+&nbsp;
 </div>
 </div>
 </div>
+
+</div>
+
 {% endfor %}
 
 </div>
 </div>
+
+<div class="container-fluid">
+<div class="row">
+<div class="col-xl-10">
+<div class="row">
+<div class="col-lg-12">
+<div class="section-tittle mb-30 d-flex align-items-center justify-content-between">
+<h2>Arts &amp; Culture</h2>
+<a href="#">See All</a>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-4 col-md-6 col-sm-6">
+<div class="technology-post mb-30">
+<div class="technology-wrapper">
+<div class="properties-img">
+<a href="post_details.html"><img src="assets/img/gallery/culture1.jpg" alt=""></a>
+</div>
+<div class="properties-caption">
+<span>Health</span>
+<h3><a href="post_details.html">Substituting ‘follow your passion’ with ‘find your purpose’</a></h3>
+<p>by <a href="#">Pete Sariya</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-6 col-sm-6">
+<div class="technology-post mb-30">
+<div class="technology-wrapper">
+<div class="properties-img">
+<a href="post_details.html"><img src="assets/img/gallery/culture2.jpg" alt=""></a>
+</div>
+<div class="properties-caption">
+<span>Culture</span>
+<h3><a href="post_details.html">Ibuprofen should not be used for managing symptoms</a></h3>
+<p>by <a href="#">Pete Sariya</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-6 col-sm-6">
+<div class="technology-post mb-30">
+<div class="technology-wrapper">
+<div class="properties-img">
+<a href="post_details.html"><img src="assets/img/gallery/culture3.jpg" alt=""></a>
+
+<div class="video-icon">
+<a class="popup-video btn-icon" href="https://www.youtube.com/watch?v=up68UAfH0d0" data-animation="bounceIn" data-delay=".4s"><i class="fas fa-play"></i></a>
+</div>
+</div>
+<div class="properties-caption">
+<span>video</span>
+<h3><a href="post_details.html">Fearing corona recession, France announces</a></h3>
+<p>by <a href="#">Pete Sariya</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
 {% endblock %}
 
 {% block prefoot %}
@@ -46,8 +177,10 @@
 <div class="col-xxl-7 col-xl-8 col-lg-9">
 
 <div class="subcrition-tittle text-center mb-40">
-<h2>Subscribe to the newsletter</h2>
-<p>Get a weekly digest of our most important stories direct to your inbox.</p>
+  <h2>Subscribe to the newsletter
+  </h2>
+  <p>Get a weekly digest of our most important stories direct to your inbox.
+  </p>
 </div>
 
 <form action="#" class="search-box">
@@ -55,14 +188,19 @@
 <input type="text" placeholder="Enter your mail">
 </div>
 <div class="search-form">
-<a href="#">Send Now</a>
+  <a href="#">Send Now
+  </a>
 </div>
 </form>
 <div class="pera text-center pt-10">
-<p>Emails sent in accordance to <a href="#">privacy policy</a>.</p>
+  <p>Emails sent in accordance to
+    <a href="#" style="text-decoration: none;">privacy policy
+    </a>.
+  </p>
 </div>
 </div>
 </div>
 </div>
 </div>
+
 {% endblock %}

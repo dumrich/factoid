@@ -16,6 +16,34 @@ CATEGORY_CHOICES = (
 
 
 class Article(models.Model):
+    CNN = "CNN"
+    FOX = "FOX"
+    NPR = "NPR"
+    AP = "AP"
+    MSNBC = "MSNBC"
+    ABC = "ABC"
+    CBS = "CBS"
+    CNBC = "CNBC"
+    NBC = "NBC"
+    VICE = "VICE"
+    BBC = "BBC"
+    ESPN = "ESPN"
+
+    NETWORKS = [
+        (CNN, 'CNN'),
+        (FOX, 'FOX'),
+        (NPR, 'NPR'),
+        (AP, 'AP'),
+        (MSNBC, 'MSNBC'),
+        (ABC, 'ABC'),
+        (CBS, 'CBS'),
+        (CNBC, 'CNBC'),
+        (NBC, 'NBC'),
+        (VICE, 'VICE'),
+        (BBC, 'BBC'),
+        (ESPN, 'ESPN'),
+        ("other", "Other")
+    ]
 
     """Represent an Article"""
     title = models.CharField(max_length=200)
@@ -45,28 +73,39 @@ class Article(models.Model):
 
     # Replace with One to Many
     sourceOne = models.URLField(max_length=300, blank=True, null=True)
+    sourceOneOrg = models.CharField(
+        max_length=10, choices=NETWORKS, default="other", blank=True, null=True)
 
     sourceTwo = models.URLField(max_length=300, blank=True, null=True)
+    sourceTwoOrg = models.CharField(
+        max_length=10, choices=NETWORKS, default="other", blank=True, null=True)
 
     sourceThree = models.URLField(max_length=300, blank=True, null=True)
+    sourceThreeOrg = models.CharField(
+        max_length=10, choices=NETWORKS, default="other", blank=True, null=True)
 
     sourceFour = models.URLField(max_length=300, blank=True, null=True)
+    sourceFourOrg = models.CharField(
+        max_length=10, choices=NETWORKS, default="other", blank=True, null=True)
 
     sourceFive = models.URLField(max_length=300, blank=True, null=True)
+    sourceFiveOrg = models.CharField(
+        max_length=10,
+        choices=NETWORKS,
+        default="other",
+        blank=True,
+        null=True)
 
     def save(self, *args, **kwargs):
         self.article_slug = self.slug()
-        m = Media("Andrew Tate Detained in Romania",
-                  "Bro got caught lackin in 4k")
+        m = Media()
         m.addSource(self.sourceOne)
         m.addSource(self.sourceTwo)
         m.addSource(self.sourceThree)
         m.addSource(self.sourceFour)
         m.addSource(self.sourceFive)
-        # replace this with true machine learning
+        # replace this with trained gpt-3 model
         self.article_text = m.gen_prompt()
-
-        print(self.article_text)
 
         super().save(*args, **kwargs)
 

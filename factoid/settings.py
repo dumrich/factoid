@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-mb7d85r-z&6ccgm#gmte_(@drh8ws+vdg39juwz#am42@b)w4%
 DEBUG = True
 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["192.168.1.227", "localhost"]
 
 
 # Application definition
@@ -141,3 +141,5 @@ LOGOUT_REDIRECT_URL = '/login'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+AUTH_PROFILE_MODULE = 'user.UserProfile'

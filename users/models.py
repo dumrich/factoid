@@ -32,7 +32,6 @@ class CustomUserManager(BaseUserManager):
         return self.create_user(email, password, **extra_fields)
 
 
-
 # Custom User Model
 class CustomUser(AbstractUser):
     username = None
@@ -43,5 +42,27 @@ class CustomUser(AbstractUser):
 
     objects = CustomUserManager()
 
+    def save(self, *args, **kwargs):
+        is_new = self._state.adding
+        super().save(*args, **kwargs)
+        if is_new:
+            UserProfile.objects.create(user=self)
+
     def __str__(self):
         return self.email
+
+
+class Category(models.Model):
+    name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
+
+
+class UserProfile(models.Model):
+    user = models.OneToOneField(CustomUser, on_delete=models.CASCADE)
+    nickname = models.CharField(max_length=30, blank=True, null=True)
+    categories = models.ManyToManyField(Category, related_name='categories', blank=True)
+
+    def __str__(self):
+        return self.user.__str__()
