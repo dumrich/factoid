@@ -11,6 +11,7 @@ revchatgpt = "*"
 newspaper3k = "*"
 openai = "*"
 pillow = "*"
+django-filter = "*"
 
 [dev-packages]
 

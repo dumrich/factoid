@@ -10,22 +10,15 @@ Factoid is a multi-perspective news site, which uses GPT-3 to idenify, filter, a
 - Github Actions for testing
 
 # Technical Features
-- News Website with 5 sources builds new article, with lists and detail views
 - iOS app and Web App
-- Bibliography
-- Thumbnail previews
+- Documentation
+- Code Comments
 - Comment Section
 - Search Feature
-- Subscribe to topics
-- Profile
 - Reading List
 - Analytics
-- Share on social media
-- Newsletter
-- Accessibility
 - Unit Tests, docker, etc
 - REST API
-- Social Media Buttons
 
 - For states
   - Verify journalists

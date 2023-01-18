@@ -3,6 +3,19 @@ from .models import Article
 from users.models import UserProfile
 from django.db.models import Q
 from django.core.paginator import Paginator
+from django.contrib.auth.decorators import login_required
+
+from django_filters.views import FilterView
+from .filters import ArticleFilter
+
+
+class ArticleSearchView(FilterView):
+    filterset_class = ArticleFilter
+    template_name = 'articles/search.html'
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        return queryset
 
 
 def show_category(request, category):
@@ -20,6 +33,7 @@ def show_category(request, category):
                    'category': category})
 
 
+@login_required
 def article_list(request):
     """List all articles"""
     user_profile = UserProfile.objects.get(user=request.user)
@@ -28,9 +42,9 @@ def article_list(request):
     categories_articles = []
 
     for category in categories:
-        categories_articles.append(Article.objects.filter(category=category.name))
+        categories_articles.append(
+            Article.objects.filter(category=category.name))
 
-    
     latest_article = Article.objects.latest('id')
     main_articles = Article.objects.order_by("-date_added")[1:4]
 

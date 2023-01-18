@@ -43,11 +43,47 @@
 
 <div class="col-lg-10">
 <div class="about-details-cap">
+
   <p class="mb-30">
+
+  <img id="speakBtn" src="{% static 'img/icon/text-to-speech.png' %}" height="39" width="39"></img>
+  <div id = "myDiv">
     {{article.article_text|linebreaks}}
+    </div>
   </p>
 </div>
 </div>
+
+<script>
+// Get the button element
+var button = document.getElementById("speakBtn");
+var isPlaying = false;
+var utterance;
+
+// Add a click event listener to the button
+button.addEventListener("click", function(){
+    if(!isPlaying) {
+        isPlaying = true;
+        // Get the div element
+        var div = document.getElementById("myDiv");
+        // Get the text content of the div
+        var text = div.textContent;
+        // Create a new SpeechSynthesisUtterance object
+        utterance = new SpeechSynthesisUtterance(text);
+        // Set the language, rate and pitch of the speech
+        utterance.lang = 'en-US';
+        utterance.rate = 0.8;
+        utterance.pitch = 1;
+        // Speak the text
+        speechSynthesis.speak(utterance);
+        button.innerHTML = 'Stop';
+    } else {
+        isPlaying = false;
+        speechSynthesis.cancel();
+        button.innerHTML = 'Speak';
+    }
+});
+</script>
 
 <div class="col-lg-8">
 <div class="about-details-cap">
@@ -68,10 +104,10 @@
 </div>
 
 <div class="social-iocn pt-20 pb-20">
-<a href="#"><img class="mr-10 mb-10" src="{% static 'img/gallery/facebook.jpg' %}" alt=""></a>
-<a href="#"><img class="mr-10 mb-10" src="{% static 'img/gallery/twitter.jpg' %}" alt="#"></a>
-<a href="#"><img class="mr-10 mb-10" src="{% static 'img/gallery/pinterest.jpg' %}" alt=""></a>
-<a href="#"><img class="mb-10" src="{% static 'img/gallery/whatsapp.jpg' %}" alt=""></a>
+<a href="https://www.facebook.com"><img class="mr-10 mb-10" src="{% static 'img/gallery/facebook.jpg' %}" alt=""></a>
+<a href="https://www.twitter.com"><img class="mr-10 mb-10" src="{% static 'img/gallery/twitter.jpg' %}" alt="#"></a>
+<a href="https://www.pinterest.com"><img class="mr-10 mb-10" src="{% static 'img/gallery/pinterest.jpg' %}" alt=""></a>
+<a href="https://www.whatsapp.com"><img class="mb-10" src="{% static 'img/gallery/whatsapp.jpg' %}" alt=""></a>
 </div>
 </div>
 </div>
