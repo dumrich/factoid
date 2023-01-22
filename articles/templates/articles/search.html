@@ -6,6 +6,7 @@
 <section class="technology-area mb-30 border-bottom">
 <div class="container-fluid">
   {% for article in object_list %}
+  <a href="{% url 'article_detail' article.slug %}">
     <div class="row">
       <div class="col-md-3">
         <img src="{{ article.thumbnail.url }}" class="img-thumbnail">
@@ -13,8 +14,12 @@
       <div class="col-md-9">
         <h2>{{ article.title }}</h2>
         <p>{{ article.description }}</p>
+        <span>Added: {{article.date_added}}</span>
+
       </div>
     </div>
+    </a>
+  <hr />
 
 </div>
 {% endfor %}
