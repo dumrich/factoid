@@ -41,16 +41,22 @@
 </div>
 </div>
 
+<style>
+  p {
+    font-family: "Arial";
+    font-size: 20px;
+  }
+</style>
+
 <div class="col-lg-10">
 <div class="about-details-cap">
 
-  <p class="mb-30">
 
   <img id="speakBtn" src="{% static 'img/icon/text-to-speech.png' %}" height="39" width="39"></img>
-  <div id = "myDiv">
+
+  <div class="post-text" id = "myDiv">
     {{article.article_text|linebreaks}}
     </div>
-  </p>
 </div>
 </div>
 
@@ -85,21 +91,36 @@ button.addEventListener("click", function(){
 });
 </script>
 
-<div class="col-lg-8">
-<div class="about-details-cap">
-<h4>Bibliography</h4>
-</div>
-</div>
+<style>
+  .source-link-large {
+      font-family: "Chivo", sans-serif;
+      text-decoration: none;
+      background: #C70D0D;
+      font-size: 22px;
+      text-align: center;
+      color: #fff;
+      display: inline-block;
+      padding: 7px 7px;
+      line-height: 17px;
+  }
+</style>
 
 <div class="col-lg-10">
-<div class="about-details-cap">
-  <p class="mb-30">
-    Source One: <a href="{{article.sourceOne}}">{{article.sourceOne}}</a><br />
-    Source Two: <a href="{{article.sourceTwo}}">{{article.sourceTwo}}</a> <br />
-    Source Three: <a href="{{article.sourceThree}}">{{article.sourceThree}}</a><br />
-    Source Four: <a href="{{article.sourceFour}}">{{article.sourceFour}}</a><br />
-    Source Five: <a href="{{article.sourceFive}}">{{article.sourceFive}}</a><br />
-  </p>
+<div class="btn-group">
+    <button class="btn source-link-large"><a style="text-decoration: none; color: inherit;" href="{{ article.sourceOne }}">{{article.get_sourceOneOrg_display}}</a>
+    </button>
+&nbsp;
+    <button class="btn source-link-large"><a style="text-decoration: none; color: inherit;" href="{{ article.sourceTwo }}">{{article.get_sourceTwoOrg_display}}</a>
+    </button>
+&nbsp;
+    <button class="btn source-link-large"><a style="text-decoration: none; color: inherit;" href="{{ article.sourceThree }}">{{article.get_sourceThreeOrg_display}}</a>
+    </button>
+&nbsp;
+    <button class="btn source-link-large"><a style="text-decoration: none; color: inherit;" href="{{ article.sourceFour }}">{{article.get_sourceFourOrg_display}}</a>
+    </button>
+&nbsp;
+    <button class="btn source-link-large"><a style="text-decoration: none; color: inherit;" href="{{ article.sourceFive }}">{{article.get_sourceFiveOrg_display}}</a>
+    </button>
 </div>
 </div>
 
@@ -131,9 +152,9 @@ button.addEventListener("click", function(){
 <a href="#"><img src="{% static 'img/gallery/comment-img1.jpg' %}" alt=""></a>
 </div>
 <div class="comments-tittle">
-<a href="#"><h4>Kristiana</h4></a>
-<span>2 days ago</span>
-<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+<a href="#"><h4>Diana</h4></a>
+<span>25 minutes ago</span>
+<p>Wow, what a sad event! I can't believe this happened!</p>
 </div>
 </div>
 </div>
@@ -145,9 +166,9 @@ button.addEventListener("click", function(){
 <a href="#"><img src="{% static 'img/gallery/comment-img2.jpg' %}" alt=""></a>
 </div>
 <div class="comments-tittle">
-<a href="#"><h4>Jonson Alex</h4> <span class="author">Author</span></a>
-<span>2 days ago</span>
-<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+<a href="#"><h4>Jim Bob</h4> <span class="author">Author</span></a>
+<span>10 minutes ago</span>
+<p>Yeah, it truly was quite unfortunate</p>
 </div>
 </div>
 </div>
