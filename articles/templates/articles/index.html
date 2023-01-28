@@ -119,62 +119,22 @@
 </div>
 </div>
 <div class="row">
+  {% for p in article %}
 <div class="col-lg-3 col-md-6 col-sm-6">
 <div class="technology-post mb-30">
 <div class="technology-wrapper">
 <div class="properties-img">
-<a href="post_details.html"><img src="assets/img/gallery/culture4.jpg" alt=""></a>
+<a href="{% url 'article_detail' p.slug%}"><img src="{{ p.thumbnail.url }}" alt=""></a>
 </div>
 <div class="properties-caption">
-<span>Health</span>
-<h3><a href="post_details.html">26 last-minute holiday gifts that are still thoughtful and unique</a></h3>
-<p>by <a href="#">Pete Sariya</a></p>
+<span>{{ p.category }}</span>
+<h3><a href="post_details.html">{{ p.title }}</a></h3>
+<p>by <a href="#">Multiple Authors</a></p>
 </div>
 </div>
 </div>
 </div>
-<div class="col-lg-3 col-md-6 col-sm-6">
-<div class="technology-post mb-30">
-<div class="technology-wrapper">
-<div class="properties-img">
-<a href="post_details.html"><img src="assets/img/gallery/culture5.jpg" alt=""></a>
-</div>
-<div class="properties-caption">
-<span>Culture</span>
-<h3><a href="post_details.html">The Amex Business Platinum vs. the Amex Business Gold</a></h3>
-<p>by <a href="#">Pete Sariya</a></p>
-</div>
-</div>
-</div>
-</div>
-<div class="col-lg-3 col-md-6 col-sm-6">
-<div class="technology-post mb-30">
-<div class="technology-wrapper">
-<div class="properties-img">
-<a href="post_details.html"><img src="assets/img/gallery/culture6.jpg" alt=""></a>
-</div>
-<div class="properties-caption">
-<span>video</span>
-<h3><a href="post_details.html">Lights that warn planes of obstacles were exposed to Open Internet</a></h3>
-<p>by <a href="#">Pete Sariya</a></p>
-</div>
-</div>
-</div>
-</div>
-<div class="col-lg-3 col-md-6 col-sm-6">
-<div class="technology-post mb-30">
-<div class="technology-wrapper">
-<div class="properties-img">
-<a href="post_details.html"><img src="assets/img/gallery/culture7.jpg" alt=""></a>
-</div>
-<div class="properties-caption">
-<span>video</span>
-<h3><a href="post_details.html">Substituting ‘follow your passion’ with ‘find your purpose’</a></h3>
-<p>by <a href="#">Pete Sariya</a></p>
-</div>
-</div>
-</div>
-</div>
+{% endfor %}
 </div>
 </div>
 </section>

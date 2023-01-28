@@ -43,28 +43,17 @@ def article_list(request):
 
     for category in categories:
         categories_articles.append(
-            Article.objects.filter(category=category.name))
+            Article.objects.filter(category=category.name).order_by('-id')[:4])
 
     latest_article = Article.objects.latest('id')
     main_articles = Article.objects.filter(id__in=[34, 35, 36, 37])[1:4]
 
     # Politics
-    politics = Article.objects.filter(
-        Q(category="politics")).order_by('-id')[:4]
-    # World
-    world = Article.objects.filter(
-        Q(category="world")).order_by('-id')[:4]
-    # Sports
-    sports = Article.objects.filter(
-        Q(category="sports")).order_by('-id')[:4]
 
     return render(request, 'articles/index.html',
                   {'latest_article': latest_article,
                    'main_articles': main_articles,
                    'profile_arts': zip(categories, categories_articles),
-                   'politics': politics,
-                   'sports': sports,
-                   'world': world,
                    'profile': user_profile})
 
 
