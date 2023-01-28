@@ -1,3 +1,4 @@
+![example workflow](https://github.com/dumrich/factoid/actions/workflows/camain.yml/badge.svg)
 # Factoid
 Factoid is a multi-perspective news site, which uses GPT-3 to idenify, filter, and display bias.
 
