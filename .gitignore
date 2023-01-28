@@ -2,7 +2,6 @@ __pycache__/
 *.log
 *.pot
 *.pyc
-media
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
