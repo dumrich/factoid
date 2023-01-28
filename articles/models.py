@@ -54,6 +54,7 @@ class Article(models.Model):
     # Article Text
     article_text = models.TextField(blank=True, null=True)
     bibliography = models.TextField(blank=True, null=True)
+
     date_added = models.DateTimeField('Date Published',
                                       auto_now_add=True,
                                       blank=True)

@@ -1,0 +1,40 @@
+{
+  "title" : "The Battle over Social Security and Medicare",
+  "date" : "2023-Jan-28",
+  "topic" : "Politics",
+  "sources" : [ {
+    "title" : "Biden warns of economic ‘chaos’ proposed by ‘MAGA Republicans’",
+    "source" : "cnn",
+    "authors" : [ "Maegan Vazquez", "Kevin Liptak", "Betsy Klein" ],
+    "date" : "18:27 UTC, Jan 26, 2023",
+    "url" : "https://cnn.com/2023/01/26/politics/biden-economy-virginia-republicans",
+    "retrieved" : "21:09 UTC, Jan 27, 2023"
+  }, {
+    "title" : "Biden bashes 'MAGA economic plan' in speech targeting House GOP",
+    "source" : "nbc",
+    "authors" : [ "Sahil Kapur", "Allan Smith", "Summer Concepcion", "Elyse Perlmutter-Gumbiner ", "Kristen Welker", "Rebecca Shabad" ],
+    "date" : "17:17 UTC, Jan 26, 2023",
+    "url" : "https://www.nbcnews.com/politics/white-house/biden-take-aim-house-gop-proposals-economic-speech-rcna67640",
+    "retrieved" : "21:14 UTC, Jan 27, 2023"
+  } ],
+  "segments" : [ {
+    "type" : "facts",
+    "content" : "Joe Biden spoke to union workers in northern Virginia Thursday afternoon, criticizing House Republicans on economic grounds. Biden argued that GOP proposals would lead to higher inflation and ruin the progress made during the Obama administration."
+  }, {
+    "type" : "verse",
+    "data" : "0",
+    "content" : "President Biden is clearly intent on defending the middle class and safeguarding the gains made against potentially disastrous Republican proposals. He has put his economic accomplishments in direct opposition to the GOP's plans to reduce entitlement programs and instate a national sales tax. Notable progress has been made in terms of wage growth and unemployment, and he has vetoed each piece of legislation sent by the GOP."
+  }, {
+    "type" : "verse",
+    "data" : "1",
+    "content" : "It is concerning that the Republicans are attempting to utilize cuts to Social Security and Medicare in the debt ceiling fight. President Biden is justified in his criticism of their plans, and his administration has employed the cabinet to put his economic plans into action. The Treasury Department has initiated 'extraordinary measures' to pay bills, yet the GOP has not proposed a unified plan for slashing spending."
+  }, {
+    "type" : "verse",
+    "data" : "0",
+    "content" : "It is concerning that the Republicans are attempting to utilize cuts to Social Security and Medicare in the debt ceiling fight. President Biden's 'Invest in America' Cabinet is tasked with ensuring the success of his economic plan, which has already demonstrated success with the US economy's growth in the last quarter of last year. Nevertheless, the GOP has yet to propose a unified plan for slashing spending, and are instead attempting to use the country's credit as a bargaining chip."
+  }, {
+    "type" : "verse",
+    "data" : "1",
+    "content" : "It is evident that President Biden is strongly opposed to the GOP's attempts to reduce Social Security and Medicare spending in the debt ceiling negotiations. His assertion that he will veto any legislation they propose further emphasizes this opposition. Additionally, Biden has noted that the Republican Party of today is much different from its predecessor, demonstrating that he does not support their current plans."
+  } ]
+}

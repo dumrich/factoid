@@ -28,14 +28,18 @@ def profile(request):
 
 
 def sign_up(request):
-    """List all articles"""
+    """Sign Up view for user authentication"""
     if request.method == 'POST':
+        # When they send the form...
         form = CustomUserCreationForm(request.POST)
         if form.is_valid():
             user = form.save()
+            # Login user
             login(request, user)
+
+            # Redirect to home page
             return redirect("/")
     else:
         form = CustomUserCreationForm()
-
+    # Return Registration page
     return render(request, "registration/sign_up.html", {"form": form})

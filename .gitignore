@@ -2,7 +2,6 @@ __pycache__/
 *.log
 *.pot
 *.pyc
-db.sqlite3
 media
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
