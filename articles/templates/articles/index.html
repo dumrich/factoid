@@ -128,7 +128,7 @@
 </div>
 <div class="properties-caption">
 <span>{{ p.category }}</span>
-<h3><a href="post_details.html">{{ p.title }}</a></h3>
+<h3><a href="{% url 'article_detail' p.slug %}">{{ p.title }}</a></h3>
 <p>by <a href="#">Multiple Authors</a></p>
 </div>
 </div>
