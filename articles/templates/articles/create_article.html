@@ -1,0 +1,56 @@
+{% extends './base.html' %}
+
+{% load static %}
+
+{% block content %}
+<section class="technology-area mb-30 border-bottom">
+
+<div class="container-fluid">
+
+    <div class="row">
+      <div class="col">
+        <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="{% url 'article_list' %}">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Create Article</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <div class="card mb-3">
+  <div class="card-header">
+    <h3>Create Article</h3>
+  </div>
+    <div class="card-body">
+    <form method="post">
+        {% csrf_token %}
+        <div class="row mb-3">
+          <div class="col-sm-1">
+            <h5>Title: </h5>
+            </div>
+          <div class="col-sm-11">
+            <input type="text" class="form-control" id="titleId" aria-describedby="titleId" placeholder="Enter Title">
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-1">
+            <h5>Descr: </h5>
+            </div>
+          <div class="col-sm-11">
+            <input type="text" class="form-control" id="descriptionId" aria-describedby="descriptionId" placeholder="Enter Description">
+            </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="titleId">Title</label>
+            <input type="text" class="form-control" id="titleId" aria-describedby="titleId" placeholder="Enter Title">
+            </div>
+        </div>
+    </form>
+    </div>
+    </div>
+</div>
+
+</section>
+{% endblock %}

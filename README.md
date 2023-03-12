@@ -18,18 +18,33 @@ TODO:
 - Github Actions for testing
 
 # Technical Features
-- iOS app and Web App
+- Web Client
+- Authentication System
+- User Profile
+  - Custom Categories
+- Article List View
+- Article Detail View
+- Search Feature
 - Documentation
 - Code Comments
+
+Todo:
+- Improve frontend
+- Newsletter
 - Comment Section
-- Search Feature
 - Reading List
-- Analytics
+- Truly automatic sourcing
+- Verified user article creation
+- Detail View improvements
+  - Find Source
+  - Fact Check
+- Factoid Finance
+  - Special (shown) finance category with latest financial news
+  - Show stock, sentiment, and price movement
+  - Also show financial data
 - Unit Tests, docker, etc
 - REST API
-
-- For states
-  - Verify journalists
+- Mobile apps
 
 # Presentation Features
 - Main Presentation (Similar to last year)
@@ -42,7 +57,3 @@ TODO:
 - Before/After Factoid Case Study
 - Performance diagrams
 
-# Schedule
-- 1/7 PostGRES Setup & Docker & Real Image works
-- 1/8 Docker and basic Production
-- 1/9 

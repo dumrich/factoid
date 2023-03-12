@@ -21,7 +21,7 @@
             <img src="{% static 'img/logo/PFP.jpg' %}" alt="avatar"
               class="rounded-circle img-fluid" style="width: 150px;">
             <h5 class="my-3">John Smith</h5>
-            <p class="text-muted mb-1">Verified Journalist</p>
+            <p class="text-muted mb-1">{% if user_profile.isVerified %} Verified Journalist {% else %} Unverified Reader {% endif %}</p>
             <p class="text-muted mb-4">Downingtown, PA</p>
             <div class="d-flex justify-content-center mb-2">
               <button type="button" class="btn btn-danger">Edit</button>
@@ -120,5 +120,11 @@
         
         </div>
       </div>
+
+    <div class="row mt-3">
+      <div class="col">
+        <h2>User Posts:</h2>
+      </div>
+    </div>
     </div>
 {% endblock %}

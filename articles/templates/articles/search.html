@@ -6,7 +6,7 @@
 <section class="technology-area mb-30 border-bottom">
 <div class="container-fluid">
   {% for article in object_list %}
-  <a href="{% url 'article_detail' article.slug %}">
+  <a style="text-decoration: none;" href="{% url 'article_detail' article.slug %}">
     <div class="row">
       <div class="col-md-3">
         <img src="{{ article.thumbnail.url }}" class="img-thumbnail">

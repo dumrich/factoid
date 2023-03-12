@@ -62,3 +62,9 @@ def article_detail(request, aslug):
     article = Article.objects.get(article_slug=aslug)
 
     return render(request, "articles/post_details.html", {'article': article})
+
+
+def article_create(request):
+    """Create articles"""
+    
+    return render(request, "articles/create_article.html")

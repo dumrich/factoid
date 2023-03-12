@@ -64,5 +64,7 @@ class UserProfile(models.Model):
     nickname = models.CharField(max_length=30, blank=True, null=True)
     categories = models.ManyToManyField(Category, related_name='categories', blank=True)
 
+    isVerified = models.BooleanField(default=False)
+
     def __str__(self):
         return self.user.__str__()
