@@ -64,7 +64,8 @@ def article_detail(request, aslug):
     return render(request, "articles/post_details.html", {'article': article})
 
 
+@login_required
 def article_create(request):
     """Create articles"""
-    
-    return render(request, "articles/create_article.html")
+    user_profile = UserProfile.objects.get(user=request.user)
+    return render(request, "articles/create_article.html", {"profile": user_profile})

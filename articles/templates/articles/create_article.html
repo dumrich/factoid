@@ -33,7 +33,7 @@
             <input type="text" class="form-control" id="titleId" aria-describedby="titleId" placeholder="Enter Title">
             </div>
         </div>
-        <div class="row">
+        <div class="row mb-3">
           <div class="col-sm-1">
             <h5>Descr: </h5>
             </div>
@@ -41,12 +41,39 @@
             <input type="text" class="form-control" id="descriptionId" aria-describedby="descriptionId" placeholder="Enter Description">
             </div>
         </div>
-        <div class="row">
-          <div class="col">
-            <label for="titleId">Title</label>
-            <input type="text" class="form-control" id="titleId" aria-describedby="titleId" placeholder="Enter Title">
+
+        <div class="row mb-3">
+          <div class="col-sm-1">
+            <h5>Author: </h5>
+            </div>
+          <div class="col-sm-11">
+<button type="button" class="btn btn-primary " id="profileHover">{{profile.nickname}}</button>
+
+            <span></span>
             </div>
         </div>
+
+        <div id="helluh">
+            <div class="row mb-3" id="addSource">
+            <div class="col-sm-1">
+                <h6 class="sourceLabel">Source URL: </h6>
+
+                </div>
+            <div class="col-sm-11">
+                <input type="text" name="text_box_" class="form-control" aria-describedby="sourceLabel" placeholder="Enter Source Link">
+                </div>
+            </div>
+        </div>
+
+        <div class="row" >
+          <div class="col">
+            <button id="add-source" class="mt-3 add-source">
+                <img src="{% static 'img/icon/plus-alt-svgrepo-com.svg' %}" alt="Plus Sign" height="60" width="60" />                
+                <span class="button-text">Add Source</span>
+            </button>
+          </div>
+        </div>
+        
     </form>
     </div>
     </div>

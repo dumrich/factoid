@@ -1,0 +1,28 @@
+.add-source {
+    width: 100%;
+    min-height: 150px; 
+    border-radius: 9px;
+    background-color: #ffffff; /* set the background color */
+    opacity: 0.5;
+    border-style: dashed;
+    border-width: 2px;
+    border-color: #000000;
+}
+
+.button-text {
+    font-size: 25px; /* increase the font size to 20 pixels */
+    font-weight: bold; /* make the text bold */
+    color: red;
+}
+
+.add-source:hover {
+    filter: brightness(90%); /* reduce the brightness by 10% on hover */
+}
+
+#profileHover {
+    pointer-events: none;
+    display: inline-block;
+    background-color: red;
+
+
+}

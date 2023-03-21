@@ -30,16 +30,14 @@ TODO:
 
 Todo:
 - Improve frontend
-- Newsletter
-- Comment Section
 - Reading List
 - Truly automatic sourcing
 - Verified user article creation
 - Detail View improvements
   - Find Source
   - Fact Check
-- Factoid Finance
-  - Special (shown) finance category with latest financial news
+- Factoid Business+
+  - Special (shown) business+ category with latest financial news
   - Show stock, sentiment, and price movement
   - Also show financial data
 - Unit Tests, docker, etc

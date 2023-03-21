@@ -20,7 +20,7 @@
     </a>
   </h2>
   <p>by
-    <a style="text-decoration: none;" href="#">{% if p.author %} p.author{% else %} Factoid Scraper {%endif%}
+    <a style="text-decoration: none;" href="#">{% if p.author %} p.author{% else %} Factoid Daily {%endif%}
     </a>
   </p>
 <div class="btn-group">
@@ -77,7 +77,7 @@
     </a>
   </h4>
   <p>by
-    <a style="text-decoration: none;" href="#"> {% if p.author %} p.author{% else %} Factoid Scraper {%endif%}
+    <a style="text-decoration: none;" href="#"> {% if p.author %} p.author{% else %} Factoid Daily {%endif%}
     </a>
   </p>
 
@@ -129,7 +129,7 @@
 <div class="properties-caption">
 <span>{{ p.category }}</span>
 <h3><a style="text-decoration: none;" href="{% url 'article_detail' p.slug %}">{{ p.title }}</a></h3>
-<p>by <a style="text-decoration: none;" href="#">{% if p.author %}p.author{% else %} Factoid Scraper {%endif%}</a></p>
+<p>by <a style="text-decoration: none;" href="#">{% if p.author %}p.author{% else %} Factoid Daily {%endif%}</a></p>
 </div>
 </div>
 </div>
