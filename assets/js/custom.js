@@ -16,3 +16,7 @@ function addTextBox() {
 
 var addButton = document.getElementById("add-source");
 addButton.addEventListener("click", addTextBox);
+
+document.getElementById("profileHover").addEventListener("click", function(){
+    window.location.href = "/user/profile";
+});

@@ -34,15 +34,14 @@ Todo:
 - Truly automatic sourcing
 - Verified user article creation
 - Detail View improvements
-  - Find Source
-  - Fact Check
+  - Find Source for claims
 - Factoid Business+
   - Special (shown) business+ category with latest financial news
   - Show stock, sentiment, and price movement
   - Also show financial data
-- Unit Tests, docker, etc
+- Unit Tests, Stress Testing, Docker, kubernetes, AWS
 - REST API
-- Mobile apps
+- Multiple Clients
 
 # Presentation Features
 - Main Presentation (Similar to last year)

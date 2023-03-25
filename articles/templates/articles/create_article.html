@@ -3,6 +3,7 @@
 {% load static %}
 
 {% block content %}
+{% if profile.isVerified %}
 <section class="technology-area mb-30 border-bottom">
 
 <div class="container-fluid">
@@ -30,7 +31,7 @@
             <h5>Title: </h5>
             </div>
           <div class="col-sm-11">
-            <input type="text" class="form-control" id="titleId" aria-describedby="titleId" placeholder="Enter Title">
+            <input type="text" class="form-control" name="aTitle" id="titleId" aria-describedby="titleId" placeholder="Enter Title">
             </div>
         </div>
         <div class="row mb-3">
@@ -38,7 +39,8 @@
             <h5>Descr: </h5>
             </div>
           <div class="col-sm-11">
-            <input type="text" class="form-control" id="descriptionId" aria-describedby="descriptionId" placeholder="Enter Description">
+            <textarea class="form-control" name="aDescr" id="descriptionId" aria-describedby="descriptionId" placeholder="Enter Description">
+            </textarea>
             </div>
         </div>
 
@@ -73,6 +75,14 @@
             </button>
           </div>
         </div>
+
+        <div class="row mt-3">
+          <div class="col-sm-11">
+<button type="submit" class="btn btn-primary ">Create</button>
+
+            <span></span>
+            </div>
+        </div>
         
     </form>
     </div>
@@ -80,4 +90,8 @@
 </div>
 
 </section>
+{% else %}
+<h1> You must be a Factoid verified user to access this page </h1>
+{% endif %}
+
 {% endblock %}

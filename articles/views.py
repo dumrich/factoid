@@ -68,4 +68,5 @@ def article_detail(request, aslug):
 def article_create(request):
     """Create articles"""
     user_profile = UserProfile.objects.get(user=request.user)
+    # TODO: Make this work
     return render(request, "articles/create_article.html", {"profile": user_profile})
