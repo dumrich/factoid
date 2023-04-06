@@ -1,6 +1,37 @@
 {% extends './base.html' %}
 
 {% block content %}
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var myModal = new bootstrap.Modal(document.getElementById("myModal"));
+    myModal.show();
+});
+</script>
+
+{% if category == "business" %}
+<!-- Modal HTML -->
+<div id="myModal" class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Factoid Business+</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p>We are excited to release the newest version of Factoid Business+, the one stop solution to your investor sentiment needs!</p>
+                <p class="text-secondary"><small>Click the red button to proceed to the category</small></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" >Cancel</button>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
 <div class="page-notification">
 <div class="container-fluid">
 <div class="row">
@@ -27,6 +58,7 @@
 </div>
 </div>
 <div class="row">
+
   {% for article in articles %}
 <div class="col-lg-3 col-md-6 col-sm-6">
 <div class="technology-post mb-40">

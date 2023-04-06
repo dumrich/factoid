@@ -47,6 +47,7 @@ def article_list(request):
 
     latest_article = Article.objects.latest('id')
     main_articles = Article.objects.filter(id__in=[34, 35, 36, 37])[1:4]
+    
 
     # Politics
 
@@ -68,5 +69,6 @@ def article_detail(request, aslug):
 def article_create(request):
     """Create articles"""
     user_profile = UserProfile.objects.get(user=request.user)
+
     # TODO: Make this work
     return render(request, "articles/create_article.html", {"profile": user_profile})

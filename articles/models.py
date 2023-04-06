@@ -46,20 +46,21 @@ class Article(models.Model):
                                 blank=True,
                                 null=True,
                                 choices=CATEGORY_CHOICES)
-
+    
     # Replace with One to Many
 
     def save(self, *args, **kwargs):
         self.article_slug = self.slug()
 
-        sources = self.source_set.all()
+        # sources = self.source_set.all()
 
-        m = Media()
-        for s in sources:
-            m.addSource(s.source)
+        # m = Media()
+        # for s in sources:
+        #     m.addSource(s.source)
 
-        # replace this with trained gpt-3 model
-        self.article_text = m.gen_prompt()
+        # # replace this with Nikita Code
+        # # self.article_text = m.gen_prompt()
+        # self.article_text = "Generating Article"
 
         super().save(*args, **kwargs)
 
@@ -109,3 +110,7 @@ class Source(models.Model):
         null=True)
 
     post = models.ForeignKey(Article, on_delete=models.CASCADE)
+
+        
+    def __str__(self):
+        return self.sourceOrg

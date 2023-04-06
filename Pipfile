@@ -12,6 +12,9 @@ openai = "*"
 pillow = "*"
 django-filter = "*"
 psycopg2-binary = "*"
+djangorestframework = "*"
+django-cors-headers = "*"
+dj-rest-auth = "*"
 
 [dev-packages]
 
