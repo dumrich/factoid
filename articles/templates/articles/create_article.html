@@ -3,7 +3,6 @@
 {% load static %}
 
 {% block content %}
-{% if profile.isVerified %}
 <section class="technology-area mb-30 border-bottom">
 
 <div class="container-fluid">
@@ -90,8 +89,5 @@
 </div>
 
 </section>
-{% else %}
-<h1> You must be a Factoid verified user to access this page </h1>
-{% endif %}
 
 {% endblock %}

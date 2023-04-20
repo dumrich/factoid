@@ -103,24 +103,28 @@ button.addEventListener("click", function(){
       padding: 7px 7px;
       line-height: 17px;
   }
+
+  .source-link-mini {
+      font-family: "Chivo", sans-serif;
+      text-decoration: none;
+      background: #C70D0D;
+      font-size: 20px;
+      text-align: center;
+      color: #fff;
+      display: inline-block;
+      padding: 7px 7px;
+      line-height: 14px;
+  }
 </style>
 
 <div class="col-lg-10">
 <div class="btn-group">
-    <button class="btn source-link-large"><a style="text-decoration: none; color: inherit;" href="{{ article.sourceOne }}">{{article.get_sourceOneOrg_display}}</a>
+{% for source in article.source_set.all %}
+
+    <button class="btn source-link-mini"><a style="text-decoration: none; color: inherit;" href="{{ source }}">{{ source.sourceOrg }}</a>
     </button>
-&nbsp;
-    <button class="btn source-link-large"><a style="text-decoration: none; color: inherit;" href="{{ article.sourceTwo }}">{{article.get_sourceTwoOrg_display}}</a>
-    </button>
-&nbsp;
-    <button class="btn source-link-large"><a style="text-decoration: none; color: inherit;" href="{{ article.sourceThree }}">{{article.get_sourceThreeOrg_display}}</a>
-    </button>
-&nbsp;
-    <button class="btn source-link-large"><a style="text-decoration: none; color: inherit;" href="{{ article.sourceFour }}">{{article.get_sourceFourOrg_display}}</a>
-    </button>
-&nbsp;
-    <button class="btn source-link-large"><a style="text-decoration: none; color: inherit;" href="{{ article.sourceFive }}">{{article.get_sourceFiveOrg_display}}</a>
-    </button>
+    
+{% endfor %}
 </div>
 </div>
 
